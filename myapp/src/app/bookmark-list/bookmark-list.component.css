@@ -1,6 +1,6 @@
 table tr {
 border-bottom:2p solid black
 }
-table tr td{ 
+table tr td,th{ 
     text-align: right;
 }

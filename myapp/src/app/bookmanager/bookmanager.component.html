@@ -12,12 +12,14 @@
     </div>
     <div>
         <label>Category</label>
-       <select formControlName="Category">
+        <input type="text" formControlName="Category" [hidden]="!isNewCat"/>
+       <select formControlName="Category" [hidden]="isNewCat">
         <option>Select Category</option>
             <option *ngFor="let item of categoryList">
                 {{item}}
             </option>
        </select>
+       <input type="button" value="+" (click)="Categoryshow()" />
     </div>
     <div>
         <input type="submit" value="Save" [disabled]="bookmark.invalid" />
