@@ -1,0 +1,29 @@
+<form [formGroup]="bookmark" (ngSubmit)="onSubmit(bookmark)">
+<fieldset>
+    <legend>Bookmark Manager</legend>
+    <h2>Add Bookmark</h2>
+    <div class="control-container">
+        <label>Title</label>
+        <input type="text" formControlName="Title"/>
+    </div>
+    <div>
+        <label>Url</label>
+        <input type="text" formControlName="Url"/>
+    </div>
+    <div>
+        <label>Category</label>
+       <select formControlName="Category">
+        <option>Select Category</option>
+            <option *ngFor="let item of categoryList">
+                {{item}}
+            </option>
+       </select>
+    </div>
+    <div>
+        <input type="submit" value="Save" [disabled]="bookmark.invalid" />
+        <input type="reset" value="Cancel" />
+        <a routerLink="/bookmark" >Bookmark List</a>
+    </div>
+</fieldset>
+</form>
+<!-- https://www.digitalocean.com/community/tutorials/angular-reactive-forms-introduction -->

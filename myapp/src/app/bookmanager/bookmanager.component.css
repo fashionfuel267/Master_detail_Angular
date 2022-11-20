@@ -1,0 +1,6 @@
+.control-container{
+    margin-bottom: 5px;
+}
+.control-container input[type=text]{
+    margin-left: 5px;
+}
